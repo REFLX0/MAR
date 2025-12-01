@@ -1,0 +1,12 @@
+# Render.com configuration
+services:
+  - type: web
+    name: gym-face-api
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python simple_face_api.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      - key: PORT
+        value: 5000
